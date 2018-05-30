@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: estimateeffortparticipantplugin;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: com.ibm.team.repository.service,
+ com.ibm.team.workitem.common,
+ com.ibm.team.workitem.service,
+ com.ibm.team.process.common,
+ com.ibm.team.process.service,
+ org.eclipse.core.runtime,
+ com.ibm.team.repository.common
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+

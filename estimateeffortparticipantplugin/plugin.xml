@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+ <extension
+       point="com.ibm.team.process.service.operationParticipants">
+    <operationParticipant
+          class="estimateeffortparticipant.EstimateEffortParticipant"
+          id="estimateeffortparticipant.EstimateEffortParticipant"
+          name="EstimateEffortParticipant"
+          operationId="com.ibm.team.workitem.operation.workItemSave">
+       <extensionService
+             componentId="estimateeffortparticipant.component"
+             implementationClass="estimateeffortparticipantplugin.EstimateEffortParticipant">
+          <prerequisites>
+             <requiredService
+                   interface="com.ibm.team.workitem.service.IWorkItemServer">
+             </requiredService>
+             <requiredService
+                   interface="com.ibm.team.repository.service.IRepositoryItemService">
+             </requiredService>
+             <requiredService
+                   interface="com.ibm.team.repository.service.IContentService">
+             </requiredService>
+             <requiredService
+                   interface="com.ibm.team.workitem.service.IAuditableServer">
+             </requiredService>
+             <requiredService
+                   interface="com.ibm.team.workitem.common.IWorkItemCommon">
+             </requiredService>
+              <requiredService
+                   interface="com.ibm.team.links.common.service.ILinkService">
+             </requiredService>
+          </prerequisites>
+       </extensionService>
+    </operationParticipant>
+ </extension>
+
+</plugin>
